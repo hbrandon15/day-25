@@ -17,5 +17,10 @@
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-print (data["temp"])
+temp_list = (data["temp"]).to_list()
+
+# avg_temp = round(sum(temp_list) / len(temp_list))
+# print(avg_temp)
+
+print (round(data["temp"].mean()))
 
